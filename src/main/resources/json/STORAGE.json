@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Kingston NV2",
+    "capacity": "1 TB",
+    "pricePerGB": 12.000,
+    "type": "SSD",
+    "cache": "-",
+    "formFactor": "M.2-2280",
+    "storageInterface": "M.2 PCIe 4.0 X4",
+    "price": 60.99
+  },
+  {
+    "name": "Samsung 970 Evo Plus",
+    "capacity": "1 TB",
+    "pricePerGB": 0.098,
+    "type": "SSD",
+    "cache": "1024 MB",
+    "formFactor": "M.2-2280",
+    "storageInterface": "M.2 PCIe 3.0 X4",
+    "price": 95.99
+  },
+  {
+    "name": "Samsung 990 Pro",
+    "capacity": "4 TB",
+    "pricePerGB": 0.077,
+    "type": "SSD",
+    "cache": "4096 MB",
+    "formFactor": "M.2-2280",
+    "storageInterface": "M.2 PCIe 4.0 X4",
+    "price": 309.99
+  },
+  {
+    "name": "Crucial P3 Plus",
+    "capacity": "1 TB",
+    "pricePerGB": 0.070,
+    "type": "SSD",
+    "cache": "-",
+    "formFactor": "M.2-2280",
+    "storageInterface": "M.2 PCIe 4.0 X4",
+    "price": 74.99
+  },
+  {
+    "name": "Samsung 980 Pro",
+    "capacity": "1 TB",
+    "pricePerGB": 0.110,
+    "type": "SSD",
+    "cache": "1024 MB",
+    "formFactor": "M.2-2280",
+    "storageInterface": "M.2 PCIe 4.0 X4",
+    "price": 108.34
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "AMD Ryzen 7 7800X3D",
+    "coreCount": 8,
+    "performanceCoreClock": 4.2,
+    "performanceCoreBoostClock": 5,
+    "tdp": 120,
+    "integratedGraphics": "Radeon",
+    "smt": true,
+    "price": 358.99,
+    "socketType": "AM5"
+  },
+  {
+    "name": "AMD Ryzen 5 7600X",
+    "coreCount": 6,
+    "performanceCoreClock": 4.7,
+    "performanceCoreBoostClock": 5.3,
+    "tdp": 105,
+    "integratedGraphics": "Radeon",
+    "smt": true,
+    "price": 207.5,
+    "socketType": "AM5"
+  },
+  {
+    "name": "AMD Ryzen 5 5600X",
+    "coreCount": 6,
+    "performanceCoreClock": 3.7,
+    "performanceCoreBoostClock": 4.6,
+    "tdp": 65,
+    "integratedGraphics": "Radeon",
+    "smt": true,
+    "price": 129,
+    "socketType": "AM4"
+  },
+  {
+    "name": "AMD Ryzen 5 7600",
+    "coreCount": 6,
+    "performanceCoreClock": 3.8,
+    "performanceCoreBoostClock": 5.1,
+    "tdp": 65,
+    "integratedGraphics": "Radeon",
+    "smt": true,
+    "price": 189,
+    "socketType": "AM5"
+  },
+  {
+    "name": "Intel Core i9-14900K",
+    "coreCount": 24,
+    "performanceCoreClock": 3.2,
+    "performanceCoreBoostClock": 6,
+    "tdp": 125,
+    "integratedGraphics": "Intel UHD Graphics 770",
+    "smt": true,
+    "price": 549,
+    "socketType": "LGA1700"
+  },
+  {
+    "name": "Intel Core i7-14700K",
+    "coreCount": 20,
+    "performanceCoreClock": 3.4,
+    "performanceCoreBoostClock": 5.6,
+    "tdp": 125,
+    "integratedGraphics": "Intel UHD Graphics 770",
+    "smt": true,
+    "price": 399.99,
+    "socketType": "LGA1700"
+  }
+]

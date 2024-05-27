@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin - CPU</title>
+	<link rel="stylesheet" href="/styles/navbar.css">
+	<link rel="stylesheet" href="/styles/adminHome.css">
+	<link rel="stylesheet" href="/styles/componentPage.css">
+</head>
+<body>
+
+<div th:replace="~{adminNavbar :: adminNavbar}"></div>
+
+<!-- Admin home content -->
+<div>
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdown">
+        <button onclick="toggleDropdown()">Admin mode</button>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="/admin/logout">Log Out</a>
+            <a href="#">Create new account</a>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to toggle dropdown -->
+<script>
+    function toggleDropdown() {
+        var dropdownContent = document.getElementById("dropdownContent");
+        dropdownContent.style.display === "block" ? dropdownContent.style.display = "none" : dropdownContent.style.display = "block";
+    }
+
+    document.addEventListener("click", function(event) {
+        var dropdown = document.getElementById("dropdown");
+        var dropdownContent = document.getElementById("dropdownContent");
+        var target = event.target;
+
+        // Check if the clicked element is inside the dropdown or the button itself
+        if (!dropdown.contains(target) && target !== dropdown) {
+            dropdownContent.style.display = "none";
+        }
+    });
+</script>
+
+<div class="large-card">
+<h2>Choose a CPU</h2>
+<div class="component-table">
+    <table style="width: 100%; height: auto;">
+
+		<tr>
+			<th>Name</th>
+			<th>Core Count</th>
+			<th>Performance Core Clock</th>
+			<th>Performance Core Boost Clock</th>
+			<th>TDP</th>
+			<th>Integrated Graphics</th>
+			<th>SMT</th>
+			<th>Price</th>
+            <th>Socket Type</th>
+            <th></th>
+		</tr>
+
+        <tr th:each="computerProcessor: ${computerProcessor}">
+            <td th:text="${computerProcessor.name}"></td>
+            <td th:text="${computerProcessor.coreCount}"></td>
+            <td th:text="${computerProcessor.performanceCoreClock}"></td>
+            <td th:text="${computerProcessor.performanceCoreBoostClock}"></td>
+            <td th:text="${computerProcessor.getTDP()}"></td>
+            <td th:text="${computerProcessor.integratedGraphics}"></td>
+            <td th:text="${computerProcessor.smt ? 'Yes' : 'No'}"></td>
+            <td th:text="${computerProcessor.price}"></td>
+            <td th:text="${computerProcessor.socketType}"></td>
+            <td>
+                <a th:href="@{/admin/addCpu(name=${computerProcessor.name}, price=${computerProcessor.price})}"><button class="add-button">Add</button></a>
+            </td>
+        </tr>
+    </table>
+
+</div>
+    <div style="text-align: center;">
+        <a href="javascript:history.go(-1)" class="back-button">Back</a>
+    </div>
+
+</div>
+</body>
+</html>

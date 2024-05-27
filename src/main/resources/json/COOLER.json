@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Thermalright Peerless Assassin 120 SE",
+    "fanRPM": "1550 RPM",
+    "noiseLevel": "25.6 dB",
+    "colour": "Black",
+    "radiatorSize": "-",
+    "price": 33.90
+  },
+  {
+    "name": "NZXT Kraken Elite 360 RGB",
+    "fanRPM": "500 - 1800 RPM",
+    "noiseLevel": "17.9 - 30.6 dB",
+    "colour": "White",
+    "radiatorSize": "360 mm",
+    "price": 271.99
+  },
+  {
+    "name": "Cooler Master MASTERLIQUID ML240L RGB V2",
+    "fanRPM": "650 - 1800 RPM",
+    "noiseLevel": "6 - 27 dB",
+    "colour": "Black",
+    "radiatorSize": "240 mm",
+    "price": 104.99
+  },
+  {
+    "name": "Deepcool GAMMAXX AG400 ARGB",
+    "fanRPM": "500 - 2000 RPM",
+    "noiseLevel": "31.6 dB",
+    "colour": "Black",
+    "radiatorSize": "-",
+    "price": 28.98
+  },
+  {
+    "name": "Corsair iCUE H150i ELITE CAPELLIX XT",
+    "fanRPM": "550 - 2100 RPM",
+    "noiseLevel": "5 - 34.1 dB",
+    "colour": "Black",
+    "radiatorSize": "360 mm",
+    "price": 189.99
+  },
+  {
+    "name": "Noctua NH-D15 chromax.black",
+    "fanRPM": "300 - 1500 RPM",
+    "noiseLevel": "19.2 - 24.6 dB",
+    "colour": "Black",
+    "radiatorSize": "-",
+    "price": 119.95
+  }
+]

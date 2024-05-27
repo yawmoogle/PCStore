@@ -1,0 +1,19 @@
+<div th:fragment="navbar">
+    <nav class="navbar">
+        <div class="navbar-links">
+            <div class="navbar-brand">
+                <a href="tempAddProd">
+                    <img src="/images/Dream PC logo.png" alt="Logo">
+                </a>
+            </div>
+            <a th:href="@{/home}" class="nav-left">Home</a>
+            <a th:href="@{/customerProductPage}" class="nav-left">Products</a>
+        </div>
+        <div class="nav-right">
+            <a th:href="@{/cart}" class="cart-icon">
+                <img src="/images/shopping-cart.png" alt="Cart">
+                <span class="cart-counter">3</span>
+            </a>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "MSI GeForce RTX 3060 Ventus 2X 12G",
+    "chipset": "GeForce RTX 3060 12GB",
+    "memory": "12 GB",
+    "coreClock": "1320 MHz",
+    "boostClock": "1777 MHz",
+    "colour": "Black",
+    "length": "235 mm",
+    "price": 289.00
+  },
+  {
+    "name": "Giabyte WINDFORCE OC",
+    "chipset": "GeForce RTX 4070",
+    "memory": "12 GB",
+    "coreClock": "1920 MHz",
+    "boostClock": "2490 MHz",
+    "colour": "Black",
+    "length": "261 mm",
+    "price": 589.99
+  },
+  {
+    "name": "ASUS DUAL OC",
+    "chipset": "GeForce RTX 4060",
+    "memory": "8 GB",
+    "coreClock": "1830 MHz",
+    "boostClock": "2535 MHz",
+    "colour": "Black",
+    "length": "227 mm",
+    "price": 309.99
+  },
+  {
+    "name": "ASUS ROG STRIX GAMING OC",
+    "chipset": "GeForce RTX 4090",
+    "memory": "24 GB",
+    "coreClock": "2235 MHz",
+    "boostClock": "2640 MHz",
+    "colour": "Black",
+    "length": "358 mm",
+    "price": 1979.99
+  },
+  {
+    "name": "Gigabyte WINDFORCE OC",
+    "chipset": "GeForce RTX 4070 Ti SUPER",
+    "memory": "16 GB",
+    "coreClock": "2340 MHz",
+    "boostClock": "2625 MHz",
+    "colour": "Black",
+    "length": "261 mm",
+    "price": 799.99
+  },
+  {
+    "name": "Gigabyte GAMING OC",
+    "chipset": "Radeon RX 7800 XT",
+    "memory": "16 GB",
+    "coreClock": "1295 MHz",
+    "boostClock": "2565 MHz",
+    "colour": "Black",
+    "length": "302 mm",
+    "price": 499.00
+  }
+]

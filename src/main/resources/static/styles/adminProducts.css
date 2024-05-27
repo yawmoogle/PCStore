@@ -1,0 +1,13 @@
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.productBox {
+    width: calc(33.33% - 20px); /* Set width to 33.33% minus margin */
+    margin: 10px; /* Margin between boxes */
+    padding: 10px; /* Padding inside the box */
+    border: 1px solid black; /* Black border around each box */
+    box-sizing: border-box; /* Include border in box sizing */
+}

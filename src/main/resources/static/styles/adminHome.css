@@ -1,0 +1,73 @@
+.adminbutton {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer; /* Add pointer cursor for better usability */
+    padding: 0;
+    margin-left: 30px;
+    font-size: 20px;
+    color: #595959;
+}
+.adminbutton:hover {
+    text-decoration: none; /* Add underline on hover */
+    background-color: #afafaf;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid #000;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #b8b8b8;
+}
+.dropdown-content a:hover {
+    background-color: #818181;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.large-card {
+    border: 2px solid #000; /* Black border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+    margin: 20px auto; /* Add some margin */
+    max-width: 95%;
+    box-sizing: border-box;
+}
+.large-card h2 {
+    margin-bottom: 20px; /* Add some space below the text */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #595959;
+}
+.sub-card {
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Add some padding */
+    margin-top: 20px; /* Add some space above the sub-card */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-card img {
+    object-fit: contain;
+}
+
+.body{
+    font-family: Arial, sans-serif;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Profile Page</title>
+</head>
+<body>
+	<span th:text="${user.username}"></span>
+	
+	<div th:object="${user}">
+		<span th:text="*{username}"></span>
+	</div>
+	
+	
+	<!-- <a th:href="@{/login(username=${user.username})}">Login</a> -->
+	
+</body>
+</html>

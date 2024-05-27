@@ -1,0 +1,92 @@
+[
+  {
+    "name": "MSI B650 GAMING PLUS WIFI",
+    "socketCPU": "AM5",
+    "formFactor": "ATX",
+    "memoryMax": "192GB",
+    "memorySlots": "4",
+    "colour": "Black",
+    "price": 169.99
+  },
+  {
+    "name": "Asus ROG STRIX B650-A GAMING WIFI",
+    "socketCPU": "AM5",
+    "formFactor": "ATX",
+    "memoryMax": "192GB",
+    "memorySlots": "4",
+    "colour": "Black/Silver",
+    "price": 229.99
+  },
+  {
+    "name": "Gigabyte B650 GAMINGX AX",
+    "socketCPU": "AM5",
+    "formFactor": "ATX",
+    "memoryMax": "192GB",
+    "memorySlots": "4",
+    "colour": "Black/Gray",
+    "price": 189.15
+  },
+  {
+    "name": "ASRock B650M Pro RS WiFi",
+    "socketCPU": "AM5",
+    "formFactor": "Micro ATX",
+    "memoryMax": "192GB",
+    "memorySlots": "4",
+    "colour": "Black/Silver",
+    "price": 206.70
+  },
+  {
+    "name": "MSI PRO B650M-P",
+    "socketCPU": "AM5",
+    "formFactor": "Micro ATX",
+    "memoryMax": "192GB",
+    "memorySlots": "4",
+    "colour": "Black/Silver",
+    "price": 119.99
+  },
+  {
+    "name": "MSI MAG X670E TOMAHAWK WIFI",
+    "socketCPU": "AM5",
+    "formFactor": "ATX",
+    "memoryMax": "192GB",
+    "memorySlots": "4",
+    "colour": "Black",
+    "price": 259.99
+  },
+  {
+    "name": "MSI PRO Z790-A MAX WIFI",
+    "socketCPU": "LGA1700",
+    "formFactor": "ATX",
+    "memoryMax": "192GB",
+    "memorySlots": "4",
+    "colour": "Silver/Black",
+    "price": 239.99
+  },
+  {
+    "name": "ASRock B760M-HDV/M.2",
+    "socketCPU": "LGA1700",
+    "formFactor": "Micro ATX",
+    "memoryMax": "96GB",
+    "memorySlots": "2",
+    "colour": "White/Black",
+    "price": 119.99
+  },
+  {
+    "name": "Asus ROG STRIX B550-F GAMING WIFI II",
+    "socketCPU": "AM4",
+    "formFactor": "ATX",
+    "memoryMax": "128GB",
+    "memorySlots": "4",
+    "colour": "Black/Red",
+    "price": 169.99
+  },
+  {
+    "name": "MSI B450M-A PRO MAX II",
+    "socketCPU": "AM4",
+    "formFactor": "Micro ATX",
+    "memoryMax": "64GB",
+    "memorySlots": "2",
+    "colour": "Black",
+    "price": 69.98
+  }
+]

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Admin</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/adminCreateNewAccount.css">
+</head>
+<body>
+
+<!-- Include the navbar fragment -->
+<div th:replace="~{adminNavbar :: adminNavbar}"></div>
+
+<!-- Admin mode -->
+<div>
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdown">
+        <button onclick="toggleDropdown()" class="adminbutton">Admin mode</button>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="/admin/logout">Log Out</a>
+            <a href="/admin/createNewAdmin">Create new account</a>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to toggle dropdown -->
+<script>
+    function toggleDropdown() {
+        var dropdownContent = document.getElementById("dropdownContent");
+        dropdownContent.style.display === "block" ? dropdownContent.style.display = "none" : dropdownContent.style.display = "block";
+    }
+
+    document.addEventListener("click", function(event) {
+        var dropdown = document.getElementById("dropdown");
+        var dropdownContent = document.getElementById("dropdownContent");
+        var target = event.target;
+
+        // Check if the clicked element is inside the dropdown or the button itself
+        if (!dropdown.contains(target) && target !== dropdown) {
+            dropdownContent.style.display = "none";
+        }
+    });
+
+    function showModal() {
+        document.getElementById("successModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("successModal").style.display = "none";
+    }
+
+    // Simulating modal popup after form submission (replace with real event)
+    document.querySelector('.admin-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        showModal(); // Show the modal on form submit for demonstration
+    });
+
+
+</script>
+
+<!-- Create new admin content -->
+<div class="large-card">
+    <h2>Create a new admin account</h2>
+    <!-- Sub-card -->
+    <div class="sub-card">
+        <!-- Form for creating a new admin -->
+        <form action="/admin/createNewAdmin" method="POST" class="admin-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="[Type name]">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="[Type email]">
+            </div>
+            <div class="form-group">
+                <label for="adminusername">Login ID:</label>
+                <input type="text" id="adminusername" name="adminusername" required placeholder="[Type preferred login ID]">
+            </div>
+            <div class="form-group">
+                <label for="adminpassword">Password:</label>
+                <input type="password" id="adminpassword" name="adminpassword" required placeholder="[Type preferred password]">
+            </div>
+            <div class="button-group">
+                <button class="form-button">Save</button>
+                <button type="button" class="form-button" onclick="window.location.href='/admin/home';">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div th:if="${message}" th:text="${message}" style="color: darkorange;" class="AccountMessage"></div>
+
+    <div th:if="${error}" th:text="${error}" style="color: red; font-size: 22px;" class="AccountMessage"></div>
+    </div>
+<div id="successModal" class="modal" th:style="${message} ? 'display:flex;' : 'display:none;'"> ">
+    <div class="modal-content">
+        <div class="welcome-box">Welcome!</div>
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <div class="inner-border">
+            <h2 id="popupSuccessMessage" th:text="'You have successfully created a new admin account!'"></h2>
+            <button class="fixed-width-button" onclick="window.location.href='/admin/home';">Back</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

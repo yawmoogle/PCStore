@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Product Components</title>
+	<link rel="stylesheet" href="/styles/navbar.css">
+	<link rel="stylesheet" href="/styles/adminHome.css">
+	<link rel="stylesheet" href="/styles/componentPage.css">
+</head>
+<body>
+
+<div th:replace="~{adminNavbar :: adminNavbar}"></div>
+
+<!-- Admin home content -->
+<div>
+	<!-- Dropdown menu -->
+	<div class="dropdown" id="dropdown">
+		<button onclick="toggleDropdown()" class="adminbutton">Admin mode</button>
+		<div class="dropdown-content" id="dropdownContent">
+			<a href="/admin/logout">Log Out</a>
+			<a href="/admin/createNewAdmin">Create new account</a>
+		</div>
+	</div>
+</div>
+
+<!-- JavaScript to toggle dropdown -->
+
+<div class="large-card">
+<div class="table-container">
+	<table class="component-table">
+		<thead>
+		<tr>
+			<th>Component</th>
+			<th>Price</th>
+			<th>Selection</th>
+
+		</tr>
+		</thead>
+		<tbody>
+
+		<tr>
+			<td>CPU</td>
+			<td th:text="${session.cpuPrice != null ? '$' + session.cpuPrice : '$0'}"></td>
+
+			<td>
+				<span th:if="${session.cpuName}" th:text="${session.cpuName}"></span>
+				<a th:unless="${session.cpuName}" href="/admin/adminProductComponentsCpu">
+					<button type="button">+ Choose a CPU</button>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>CPU Cooler</td>
+			<td th:text="${session.cpuCoolerPrice != null ? '$' + session.cpuCoolerPrice : '$0'}"></td>
+			<td>
+				<span th:if="${session.cpuCoolerName}" th:text="${session.cpuCoolerName}"></span>
+				<a th:unless="${session.cpuCoolerName}" href="/admin/adminProductComponentsCpuCooler">
+					<button type="button">+ Choose a CPU Cooler</button>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Motherboard</td>
+			<td th:text="${session.motherboardPrice != null ? '$' + session.motherboardPrice : '$0'}"></td>
+			<td>
+				<span th:if="${session.motherboardName}" th:text="${session.motherboardName}"></span>
+				<a th:unless="${session.motherboardName}" href="/admin/adminProductComponentsMotherboard">
+					<button type="button">+ Choose a Motherboard</button>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Memory</td>
+			<td th:text="${session.memoryPrice != null ? '$' + session.memoryPrice : '$0'}"></td>
+			<td>
+				<span th:if="${session.memoryName}" th:text="${session.memoryName}"></span>
+				<a th:unless="${session.memoryName}" href="/admin/adminProductComponentsMemory">
+					<button type="button">+ Choose a Memory</button>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Storage</td>
+			<td th:text="${session.storagePrice != null ? '$' + session.storagePrice : '$0'}"></td>
+			<td>
+				<span th:if="${session.storageName}" th:text="${session.storageName}"></span>
+				<a th:unless="${session.storageName}" href="/admin/adminProductComponentsStorage">
+					<button type="button">+ Choose Storage</button>
+				</a>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td>Video Card</td>
+			<td th:text="${session.videoCardPrice != null ? '$' + session.videoCardPrice : '$0'}"></td>
+			<td>
+				<span th:if="${session.videoCardName}" th:text="${session.videoCardName}"></span>
+				<a th:unless="${session.videoCardName}" href="/admin/adminProductComponentsVideoCard">
+					<button type="button">+ Choose a Video Card</button>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Case</td>
+			<td th:text="${session.computerCasePrice != null ? '$' + session.computerCasePrice : '$0'}"></td>
+			<td>
+				<span th:if="${session.computerCaseName}" th:text="${session.computerCaseName}"></span>
+				<a th:unless="${session.computerCaseName}" href="/admin/adminProductComponentsCase">
+					<button type="button">+ Choose a Case</button>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Power Supply</td>
+			<td th:text="${session.powerSupplyPrice != null ? '$' + session.powerSupplyPrice : '$0'}"></td>
+			<td>
+				<span th:if="${session.powerSupplyName}" th:text="${session.powerSupplyName}"></span>
+				<a th:unless="${session.powerSupplyName}" href="/admin/adminProductComponentsPowerSupply">
+					<button type="button">+ Choose a Power Supply</button>
+				</a>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+	<!-- Reset modal -->
+	<div id="resetModal" class="modal" style="display: none;">
+		<div class="modal-content">
+			<span class="close-button" onclick="closeResetModal()">&times;</span>
+			<h3>Are you sure you want to clear all selections?</h3>
+			<div class="modal-buttons">
+				<button onclick="resetSelection()">Reset</button>
+				<button onclick="closeResetModal()">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Total price -->
+	<div class="total-price" id="totalPriceContainer">
+		<span>Total Price: </span>
+		<span id="totalPrice">$0</span>
+	</div>
+
+	<!-- Save and Reset buttons -->
+	<div class="buttons-container">
+
+		<form id="saveForm" method="post" action="/admin/saveAdminProduct">
+			<input type="hidden" name="cpuName" th:value="${session.cpuName}">
+			<input type="hidden" name="cpuPrice" th:value="${session.cpuPrice}">
+
+			<input type="hidden" name="cpuCoolerName" th:value="${session.cpuCoolerName}">
+			<input type="hidden" name="cpuCoolerPrice" th:value="${session.cpuCoolerPrice}">
+
+			<input type="hidden" name="motherboardName" th:value="${session.motherboardName}">
+			<input type="hidden" name="motherboardPrice" th:value="${session.motherboardPrice}">
+
+			<input type="hidden" name="memoryName" th:value="${session.memoryName}">
+			<input type="hidden" name="memoryPrice" th:value="${session.memoryPrice}">
+
+			<input type="hidden" name="storageName" th:value="${session.storageName}">
+			<input type="hidden" name="storagePrice" th:value="${session.storagePrice}">
+
+			<input type="hidden" name="videoCardName" th:value="${session.videoCardName}">
+			<input type="hidden" name="videoCardPrice" th:value="${session.videoCardPrice}">
+
+			<input type="hidden" name="computerCaseName" th:value="${session.computerCaseName}">
+			<input type="hidden" name="computerCasePrice" th:value="${session.computerCasePrice}">
+
+			<input type="hidden" name="powerSupplyName" th:value="${session.powerSupplyName}">
+			<input type="hidden" name="powerSupplyPrice" th:value="${session.powerSupplyPrice}">
+
+			<button type="submit" class="save-button" onsubmit="return validateAllComponentsSelected()">Save</button>
+		</form>
+
+		<button class="reset-button">Reset</button>
+<!--		<button type="button" onclick="confirmReset()">Reset</button>-->
+
+	</div>
+</div>
+<script src="/js/adminProductComponents.js"></script>
+</body>
+
+
+
+</html>
+

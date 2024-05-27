@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Memory</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/adminHome.css">
+    <link rel="stylesheet" href="/styles/componentPage.css">
+</head>
+<body>
+
+<div th:replace="~{adminNavbar :: adminNavbar}"></div>
+
+<!-- Admin home content -->
+<div>
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdown">
+        <button onclick="toggleDropdown()" class="adminbutton">Admin mode</button>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="/admin/logout">Log Out</a>
+            <a href="/admin/createNewAdmin">Create new account</a>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to toggle dropdown -->
+<script>
+    function toggleDropdown() {
+        var dropdownContent = document.getElementById("dropdownContent");
+        dropdownContent.style.display === "block" ? dropdownContent.style.display = "none" : dropdownContent.style.display = "block";
+    }
+
+    document.addEventListener("click", function(event) {
+        var dropdown = document.getElementById("dropdown");
+        var dropdownContent = document.getElementById("dropdownContent");
+        var target = event.target;
+
+        // Check if the clicked element is inside the dropdown or the button itself
+        if (!dropdown.contains(target) && target !== dropdown) {
+            dropdownContent.style.display = "none";
+        }
+    });
+</script>
+<div class="large-card">
+<h2>Choose Memory</h2>
+<div class="component-table">
+	<table style="width: 100%; height: auto;">
+	
+		<tr>
+			<th>Name</th>
+			<th>Speed</th>
+			<th>Modules</th>
+			<th>Price/GB</th>
+			<th>Color</th>
+			<th>First Word Latency</th>
+			<th>CAS Latency</th>
+			<th>Price</th>
+			<th> </th>
+		</tr>
+        <tr th:each="memory: ${memory}">
+            <td th:text="${memory.name}"></td>
+            <td th:text="${memory.speed}"></td>
+            <td th:text="${memory.getModules()}"></td>
+            <td th:text="${memory.getPricePerGB()}"></td>
+            <td th:text="${memory.colour}"></td>
+            <td th:text="${memory.getFirstWordLatency()}"></td>
+            <td th:text="${memory.casLatency}"></td>
+            <td th:text="${memory.price}"></td>
+            <td>
+                <a th:href="@{/admin/addMemory(name=${memory.name}, price=${memory.price})}"><button class="add-button">Add</button></a>
+            </td>
+        </tr>
+    </table>
+
+</div>
+    <div style="text-align: center;">
+        <a href="javascript:history.go(-1)" class="back-button">Back</a>
+    </div>
+
+</div>
+</body>
+</html>

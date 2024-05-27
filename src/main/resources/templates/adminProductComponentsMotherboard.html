@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Motherboard</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/adminHome.css">
+    <link rel="stylesheet" href="/styles/componentPage.css">
+</head>
+<body>
+
+<div th:replace="~{adminNavbar :: adminNavbar}"></div>
+
+<!-- Admin home content -->
+<div>
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdown">
+        <button onclick="toggleDropdown()" class="adminbutton">Admin mode</button>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="/admin/logout">Log Out</a>
+            <a href="/admin/createNewAdmin">Create new account</a>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to toggle dropdown -->
+<script>
+    function toggleDropdown() {
+        var dropdownContent = document.getElementById("dropdownContent");
+        dropdownContent.style.display === "block" ? dropdownContent.style.display = "none" : dropdownContent.style.display = "block";
+    }
+
+    document.addEventListener("click", function(event) {
+        var dropdown = document.getElementById("dropdown");
+        var dropdownContent = document.getElementById("dropdownContent");
+        var target = event.target;
+
+        // Check if the clicked element is inside the dropdown or the button itself
+        if (!dropdown.contains(target) && target !== dropdown) {
+            dropdownContent.style.display = "none";
+        }
+    });
+</script>
+<div class="large-card">
+<h2>Choose Motherboard</h2>
+<div class="component-table">
+        <table style="width: 100%; height: auto;">
+
+            <tr>
+                <th>Name</th>
+                <th>Socket/CPU</th>
+                <th>Form Factor</th>
+                <th>Motherboard Max</th>
+                <th>Motherboard Slots</th>
+                <th>Color</th>
+                <th>Price</th>
+                <th> </th>
+            </tr>
+            <tr th:each="motherboard: ${motherboard}">
+                <td th:text="${motherboard.name}" th:value="${motherboard.name}"></td>
+                <td th:text="${motherboard.getSocketCPU()}" th:value="${motherboard.getSocketCPU()}"></td>
+                <td th:text="${motherboard.formFactor}" th:value="${motherboard.formFactor}"></td>
+                <td th:text="${motherboard.getMemoryMax()}" th:value="${motherboard.getMemoryMax()}"></td>
+                <td th:text="${motherboard.getMemorySlots()}" th:value="${motherboard.name}"></td>
+                <td th:text="${motherboard.colour}" th:value="${motherboard.colour}"></td>
+                <td th:text="${motherboard.price}" th:value="${motherboard.price}"></td>
+                <td>
+                    <a th:href="@{/admin/addMotherboard(name=${motherboard.name}, price=${motherboard.price})}"><button class="add-button">Add</button></a>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+</div>
+    <div style="text-align: center;">
+        <a href="javascript:history.go(-1)" class="back-button">Back</a>
+    </div>
+
+</div>
+
+</body>
+</html>
+

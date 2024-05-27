@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Corsair 4000D Airflow",
+    "type": "ATX Mid Tower",
+    "colour": "Black",
+    "powerSupply": "None",
+    "sidePanel": "Tinted Tempered Glass",
+    "externalVolume": "48.6L",
+    "internal35Bays": 2,
+    "price": 89.99
+  },
+  {
+    "name": "NZXT H5 Flow",
+    "type": "ATX Mid Tower",
+    "colour": "Black",
+    "powerSupply": "None",
+    "sidePanel": "Tempered Glass",
+    "externalVolume": "47.0L",
+    "internal35Bays": 1,
+    "price": 94.99
+  },
+  {
+    "name": "NZXT H9 Flow",
+    "type": "ATX Mid Tower",
+    "colour": "White",
+    "powerSupply": "None",
+    "sidePanel": "Tempered Glass",
+    "externalVolume": "66.9L",
+    "internal35Bays": 2,
+    "price": 154.99
+  },
+  {
+    "name": "Montech AIR 903 MAX",
+    "type": "ATX Mid Tower",
+    "colour": "Black",
+    "powerSupply": "None",
+    "sidePanel": "Tempered Glass",
+    "externalVolume": "54.2L",
+    "internal35Bays": 2,
+    "price": 154.99
+  },
+  {
+    "name": "NZXT H6 Flow",
+    "type": "ATX Mid Tower",
+    "colour": "White",
+    "powerSupply": "None",
+    "sidePanel": "Tempered Glass",
+    "externalVolume": "51.8L",
+    "internal35Bays": 1,
+    "price": 95.98
+  }
+]

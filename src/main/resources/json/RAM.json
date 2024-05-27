@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Corsair Vengeance 32 GB",
+    "speed": 5600,
+    "modules": "2 x 16GB",
+    "pricePerGB": 3.56,
+    "colour": "Black",
+    "firstWordLatency": "12.857 ns",
+    "casLatency": 36,
+    "price": 113.99
+  },
+  {
+    "name": "G.Skill Trident Z5 RGB 32 GB",
+    "speed": 6000,
+    "modules": "2 x 16GB",
+    "pricePerGB": 3.75,
+    "colour": "Black",
+    "firstWordLatency": "12 ns",
+    "casLatency": 36,
+    "price": 119.99
+  },
+  {
+    "name": "G.Skill Trident Z5 RGB 64 GB",
+    "speed": 6400,
+    "modules": "2 x 32GB",
+    "pricePerGB": 3.40,
+    "colour": "Black/Silver",
+    "firstWordLatency": "10 ns",
+    "casLatency": 32,
+    "price": 217.99
+  },
+  {
+    "name": "Corsair Vengeance RGB 32 GB",
+    "speed": 6000,
+    "modules": "2 x 16GB",
+    "pricePerGB": 3.43,
+    "colour": "White",
+    "firstWordLatency": "12 ns",
+    "casLatency": 36,
+    "price": 109.99
+  },
+  {
+    "name": "TEAMGROUP T-Force Delta RGB 32 GB",
+    "speed": 6000,
+    "modules": "2 x 16GB",
+    "pricePerGB": 3.09,
+    "colour": "White",
+    "firstWordLatency": "10 ns",
+    "casLatency": 30,
+    "price": 98.99
+  }
+]

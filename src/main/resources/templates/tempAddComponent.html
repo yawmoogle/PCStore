@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Products</title>
+<link href="styles/base-template.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="styles/order-form-design.css" rel="stylesheet">
+</head>
+<body>
+    
+
+    <br><br>
+    <form action="addComponent" method="post">
+        <div class="formbox" style="height: auto; width: 520px;">
+            <h1>Add Products</h1>
+            <!-- <p class="p">Pain is temporary, cookies are forever!</p> -->
+            <br><br>
+            <label>Product Name*:</label>
+            <br>
+            <input type="text" name="name" placeholder="Insert product name here" width="auto" required>
+            <br><br>
+            <label>Core Count*:</label>
+            <br>
+            <input type="text" name="coreCount" placeholder="Insert product name here" width="auto" required>
+            <br><br>
+            <label>Performance Core Clock*:</label>
+            <br>
+            <input type="text" name="performanceCoreClock" placeholder="Insert product name here" width="auto" required>
+            <br><br>
+            <label>Performance Core Boost Clock*:</label>
+            <br>
+            <input type="text" name="performanceCoreBoostClock" placeholder="Insert product name here" width="auto" required>
+            <br><br>
+            <label>TDP*:</label>
+            <br>
+            <input type="text" name="TDP" placeholder="Insert product name here" width="auto" required>
+            <br><br>
+            <label>Integrated Graphics*:</label>
+            <br>
+            <input type="text" name="integratedGraphics" placeholder="Insert product name here" width="auto" required>
+            <br><br>
+            <label>SMT*:</label>
+            <br>
+            <input type="text" name="smt" placeholder="Insert product name here" width="auto" required>
+            <br><br>
+            <label>Product Price*: $</label>
+            <input type="text" name="price" placeholder="Insert price here" width="auto" required>
+            <br>
+            <button class="button-74" type="submit" role="button">Submit</button>
+            <br><br>
+            <a href="home"> Back</a>
+            <<!-- div th:if="${confirmation != null}">
+                <b><span th:text="${confirmation}"></span></b>
+            </div> -->
+            
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer; /* Add pointer cursor for better usability */
+    padding: 0;
+    margin-left: 30px;
+    font-size: 13px;
+    color: #595959;
+}
+button:hover {
+    text-decoration: none; /* Add underline on hover */
+    background-color: #afafaf;
+}
+.large-card {
+    border: 2px solid #000; /* Black border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+    margin: 20px auto; /* Add some margin */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.large-card h2 {
+    margin-bottom: 20px; /* Add some space below the text */
+    text-align: center;
+}
+.sub-card {
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Add some padding */
+    margin-top: 20px; /* Add some space above the sub-card */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-card img {
+    object-fit: contain;
+}

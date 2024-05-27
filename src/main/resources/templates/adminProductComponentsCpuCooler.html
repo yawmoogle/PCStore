@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - CPU Cooler</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/adminHome.css">
+    <link rel="stylesheet" href="/styles/componentPage.css">
+</head>
+<body>
+
+<div th:replace="~{adminNavbar :: adminNavbar}"></div>
+
+<!-- Admin home content -->
+<div>
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdown">
+        <button onclick="toggleDropdown()" class="adminbutton">Admin mode</button>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="/admin/logout">Log Out</a>
+            <a href="/admin/createNewAdmin">Create new account</a>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to toggle dropdown -->
+<script>
+    function toggleDropdown() {
+        var dropdownContent = document.getElementById("dropdownContent");
+        dropdownContent.style.display === "block" ? dropdownContent.style.display = "none" : dropdownContent.style.display = "block";
+    }
+
+    document.addEventListener("click", function(event) {
+        var dropdown = document.getElementById("dropdown");
+        var dropdownContent = document.getElementById("dropdownContent");
+        var target = event.target;
+
+        // Check if the clicked element is inside the dropdown or the button itself
+        if (!dropdown.contains(target) && target !== dropdown) {
+            dropdownContent.style.display = "none";
+        }
+    });
+</script>
+<div class="large-card">
+<h2>Choose CPU Cooler</h2>
+<div class="component-table">
+    <table style="width: 100%; height: auto;">
+
+		<tr>
+			<th>Name</th>
+			<th>Fan RPM</th>
+			<th>Noise Level</th>
+			<th>Color</th>
+			<th>Radiator Size</th>
+			<th>Price</th>
+            <th></th>
+		</tr>
+        <tr th:each="cpuCooler : ${cpuCooler}">
+            <td th:text="${cpuCooler.name}">Name</td>
+            <td th:text="${cpuCooler.getFanRPM()}">Fan RPM</td>
+            <td th:text="${cpuCooler.noiseLevel}">Noise Level</td>
+            <td th:text="${cpuCooler.colour}">Color</td>
+            <td th:text="${cpuCooler.radiatorSize}">Radiator Size</td>
+            <td th:text="${cpuCooler.price}">Price</td>
+            <td>
+                <a th:href="@{/admin/addCpuCooler(name=${cpuCooler.name}, price=${cpuCooler.price})}"><button class="add-button">Add</button></a>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+    <div style="text-align: center;">
+        <a href="javascript:history.go(-1)" class="back-button">Back</a>
+    </div>
+
+</div>
+</body>
+</html>
